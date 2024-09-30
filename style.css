@@ -58,6 +58,22 @@ section{
     max-width: 1200px;
     margin: 0 auto;
 }
+.btn{
+    display: inline-block;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    letter-spacing: 0.1rem;
+}
+.btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+    box-shadow:var(--box-shadow) ;
+}
 .header{
     position: sticky;
     top: 0;left: 0;right: 0;
@@ -65,6 +81,25 @@ section{
     background: var(--black);
     border-bottom:  var(--border);
    
+}
+.header::before{
+    content: '';
+    position: absolute;
+    bottom: -1rem;left: 0;
+    height: 1rem;
+    background-color: var(--main-color);
+    width: 0%;
+    animation: scrollIndicator linear;
+    animation-timeline: scroll();
+}
+@keyframes scrollIndicator {
+    to{
+        width: 100%;
+    }
+}
+
+body{
+    height: 500rem;
 }
 
 .header .flex{
@@ -110,7 +145,47 @@ section{
     display: none;
 }
 
-
+/* home section start */
+ .home{
+    background: url('https://images.pexels.com/photos/917732/pexels-photo-917732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),no-repeat, linear-gradient(180deg, transparent, var(--main-color));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: bottom;
+    min-height: 88vh;
+    position: relative;
+ }
+ .home .content{
+    position: absolute;
+    bottom: 0;right: 0;left: 0;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 1rem;
+ }
+ .home .content .logo_icon{
+    width: 30rem;
+    filter: drop-shadow(0 .5rem 1rem var(--light-bg));
+    transform-origin: top;
+    animation: float 2s linear infinite;
+ }
+ @keyframes float {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2rem);
+    }
+ }
+ .home .content h3{
+    font-size: clamp(3.5rem, 7.5rem, 11rem);
+    color: var(--black);
+ }
+ .home .content p{
+    font-size: clamp(3rem, 3rem, 5rem);
+    color: var(--black);
+    font-weight: 500;
+    padding-bottom: 1rem;
+ }
+/* home section end */
 
 
 
