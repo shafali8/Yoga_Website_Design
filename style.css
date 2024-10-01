@@ -154,7 +154,7 @@ body{
 
 /* home section start */
  .home{
-    background: url('https://images.pexels.com/photos/460307/pexels-photo-460307.jpeg?auto=compress&cs=tinysrgb&w=600'),no-repeat, linear-gradient(180deg, transparent, var(--main-color));
+    background: url('https://cdn.pixabay.com/photo/2022/01/13/00/05/austria-6934162_960_720.jpg'),no-repeat, linear-gradient(180deg, transparent, var(--main-color));
     background-blend-mode: overlay;
     background-size: cover;
     background-position: bottom;
@@ -551,6 +551,76 @@ body:has(#themeToggler) .book .row .form .flex .input input::-webkit-calender-pi
     filter: invert(1);
 }
 /* book section end */
+
+/* blog section start */
+.blogs .box-container-blogs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+.blogs .box-container-blogs .box-blogs .image{
+  height: 45rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: .5rem;  
+}
+.blogs .box-container-blogs .box-blogs .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.blogs .box-container-blogs .box-blogs:hover .image img{
+object-position: bottom;
+}
+.blogs .box-container-blogs .box-blogs .info{
+    position: absolute;
+    bottom: -5rem; left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s all ease;
+}
+.blogs .box-container-blogs .box-blogs:hover .info{
+margin-bottom: 7rem;
+}
+.blogs .box-container-blogs .box-blogs .info a{
+    font-size: 1.8rem;
+}
+.blogs .box-container-blogs .box-blogs .info a i{
+    color: var(--main-color);
+    margin-right: 0.5rem;
+}
+.blogs .box-container-blogs .box-blogs .info a span{
+    color: var(--light-color);
+}
+.blogs .box-container-blogs .box-blogs .info a:hover i{
+    color: var(--black);
+}
+.blogs .box-container-blogs .box-blogs .content{
+  text-align: center;
+  padding: 2rem;  
+}
+.blogs .box-container-blogs .box-blogs .content h3{
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.blogs .box-container-blogs .box-blogs .content p{
+    font-size: 1.6rem;
+    color: var(--light-color);
+    line-height: 1.8rem;
+    padding: 1rem 0;
+}
+/* blog section end */
 
 
 
