@@ -622,6 +622,44 @@ margin-bottom: 7rem;
 }
 /* blog section end */
 
+/* scroll-slide section start */
+.scroll-slide{
+    background-color: var(--light-bg);
+    white-space: nowrap;
+}
+.scroll-slide .row{
+    overflow: hidden;
+}
+.scroll-slide .row .col{
+    display: inline-block;
+    animation: slide 20s linear infinite;
+}
+.scroll-slide:hover .row .col{
+ animation-play-state: paused;
+}
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.scroll-slide .row .col p{
+    display: inline-block;
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+.scroll-slide .row .col p:hover{
+    color: var(--black);
+}
+.scroll-slide .row .col i{
+    font-size: 2rem;
+    margin: 0 1.5rem;
+    color: var(--main-color);
+}
+/* scroll-slide section end */
+
 
 
 
