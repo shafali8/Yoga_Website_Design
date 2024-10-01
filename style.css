@@ -154,7 +154,7 @@ body{
 
 /* home section start */
  .home{
-    background: url('https://images.pexels.com/photos/6453925/pexels-photo-6453925.jpeg?auto=compress&cs=tinysrgb&w=600'),no-repeat, linear-gradient(180deg, transparent, var(--main-color));
+    background: url('https://images.pexels.com/photos/460307/pexels-photo-460307.jpeg?auto=compress&cs=tinysrgb&w=600'),no-repeat, linear-gradient(180deg, transparent, var(--main-color));
     background-blend-mode: overlay;
     background-size: cover;
     background-position: bottom;
@@ -495,6 +495,62 @@ border-radius: .5rem;
     background-color: var(--black);
 }
 /* review section end */
+
+/* book section start */
+.book .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+.book .row .image-book{
+    flex: 0 1 55rem;
+}
+.book .row .image-book img{
+    width: 100%;
+    border-radius: .5rem;
+}
+.book .row .form{
+    flex: 1 1 40rem;
+}
+.book .row .form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.book .row .form .flex .input{
+    flex: 1 1 20rem;
+}
+.book .row .form p{
+    font-size: 1.6rem;
+    color: var(--light-color);
+    padding-bottom: 1rem;
+}
+.book .row .form .flex .input input,
+.book .row .form textarea{
+ width: 100%;
+ border-radius: .5rem;
+ font-size: 1.8rem;
+ color: var(--main-color);
+ text-transform: none;
+ border: var(--border);
+ background-color: var(--light-bg);
+ padding: 1rem 1.4rem;
+
+}
+.book .row .form textarea{
+    height: 15rem;
+    resize: none;
+}
+.book .row .form .flex .input input::-webkit-calender-picker-indicator{
+    cursor: pointer;
+}
+body:has(#themeToggler) .book .row .form .flex .input input::-webkit-calender-picker-indicator{
+    filter: invert(1);
+}
+/* book section end */
 
 
 
